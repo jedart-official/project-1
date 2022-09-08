@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1C1B21;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.preview {
+  background-image: url("/assets/img/preview_back.png");
+  background-size: cover;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+.header__menu {
+  margin-left: 65px;
+}
+.header__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 55px;
+}
+.preview__text {
+  margin-top: 320px;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 130px;
+}
+.preview__title {
+  font-weight: bold;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.preview__name {
+  font-size: 100px;
+  margin-bottom: 50px;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  line-height: 150px;
+}
+.preview__player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.preview__play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.preview__line {
+  position: relative;
+  width: 100%;
+  margin: 0 45px;
+  height: 2px;
+  background-color: white;
+}
+.preview__time {
+  min-width: 110px;
+}
+
+.fully__line {
+  height: 2px;
+  background-color: #7A66CC;
+  position: absolute;
+  width: 30%;
+}
+.fully__line::before {
+  content: "";
+  height: 20px;
+  background-color: #7A66CC;
+  width: 2px;
+  position: absolute;
+  right: 0;
+  top: -9px;
+}
+
+.blog {
+  margin-bottom: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.blog__item {
+  position: relative;
+  max-width: 350px;
+  border-radius: 20px 0px;
+}
+.blog__text {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: #7A66CC;
+  opacity: 0.7;
+  border-radius: 20px 0px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+}
