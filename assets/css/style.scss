@@ -35,8 +35,8 @@ li {
 
 .preview {
     background-image: url("../img/preview_back.png");
-    background-size: cover;
     font-size: 18px;
+    background-size: cover;
     font-weight: bold;
 }
 
@@ -480,3 +480,284 @@ li {
     font-size: 24px;
     line-height: 36px;
 }
+
+.tours {
+    margin-bottom: 180px;
+    &__content {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4,255px);
+        grid-template-rows: repeat(2,235px);
+    }
+    &__item{
+        &:nth-child(1){
+            grid-column: 1/2;
+            grid-row: 1/4;
+        }
+        &:nth-child(4){
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }
+    }
+    // .tours__left
+
+    &__left {
+    }
+
+    // .tours__mid
+
+    &__mid {
+    }
+
+    // .tours__top
+
+    &__top {
+        display: flex;
+        gap: 30px;
+    }
+    &__text {
+
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: #7A66CC;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    // .tours__bottom
+
+    &__bottom {
+        
+        position: relative;
+    }
+
+    // .tours__right
+
+    &__right {
+    }
+}
+
+
+.toursnext {
+    margin-bottom: 180px;
+    // .toursnext__content
+
+    &__content {
+        position: relative;
+    }
+
+    // .toursnext__item
+
+    &__item {
+        border-radius: 30px 0px;
+        background-color: #2F2B2B;
+        max-width: 350px;
+    }
+
+    // .toursnext__image
+
+    &__image {
+    }
+
+    // .toursnext__info
+
+    &__info {
+        padding-left: 35px;
+    }
+
+    // .toursnext__adress
+
+    &__adress {
+        margin-top: 30px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        opacity: 0.5;
+    }
+
+    // .toursnext__descr
+
+    &__descr {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    // .toursnext__buy
+
+    &__buy {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+
+    // .toursnext__date
+
+    &__date {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+
+    // .toursnext__ticket
+
+    &__ticket {
+        padding: 18px 62px 18px 52px;
+        background: #7A66CC;
+        border-radius: 30px 0px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+}
+.swiper-button-prev {
+    transform: translate(-80px, 0);
+    width: 40px;
+    height: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 0px;
+    background-image: url(../img/prevBack.png);
+    background-size: cover;
+    background-position: center;
+    &::after{
+        content: ''!important;
+
+    }
+}
+.swiper-button-next {
+    transform: translate(80px, 0);
+    width: 40px;
+    height: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 0px;
+    background-image: url(../img/prevNext.png);
+    background-size: cover;
+    background-position: center;
+    &::after{
+        content: ''!important;
+
+    }
+}
+
+
+.footer {
+    margin-bottom: 40px;
+    // .footer__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .footer__logo
+
+    &__logo {
+        margin-bottom: 60px;
+    }
+
+    // .footer__info
+
+    &__info {
+        display: flex;
+    }
+
+    // .footer__artist
+
+    &__artist {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+    }
+
+    // .footer__title
+
+    &__title {
+
+    }
+
+    &__descr{
+        margin-left: 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+    }
+    // .footer__email
+
+    &__email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .footer__social
+
+    &__social {
+        margin-top: 70px;
+    }
+
+    // .footer__rights
+
+    &__rights {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+}
+.container {
+}
+.social {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 100px;
+    // .social__item
+
+    &__item {
+        width: 60px;
+        height: 60px;
+        background: #2C2C2C;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .social__area
+
+    &__area {
+        width: 44px;
+        height: 44px;
+        background: #7A66CC;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
