@@ -5,7 +5,7 @@ body {
   height: 100%;
   width: 100%;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -49,25 +49,30 @@ li {
           align-items: center;
   padding: 30px 0;
 }
+
 .header__menu {
   margin-left: 65px;
 }
+
 .header__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 55px;
 }
+
 .preview__text {
   margin-top: 320px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   padding-bottom: 130px;
 }
+
 .preview__title {
   font-weight: bold;
   font-size: 48px;
   margin-bottom: 10px;
 }
+
 .preview__name {
   font-size: 100px;
   margin-bottom: 50px;
@@ -75,6 +80,7 @@ li {
   color: transparent;
   line-height: 150px;
 }
+
 .preview__player {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +89,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .preview__play {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,6 +98,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .preview__line {
   position: relative;
   width: 100%;
@@ -98,6 +106,7 @@ li {
   height: 2px;
   background-color: white;
 }
+
 .preview__time {
   min-width: 110px;
 }
@@ -108,8 +117,9 @@ li {
   position: absolute;
   width: 30%;
 }
+
 .fully__line::before {
-  content: "";
+  content: '';
   height: 20px;
   background-color: #7A66CC;
   width: 2px;
@@ -125,11 +135,13 @@ li {
   display: flex;
   gap: 30px;
 }
+
 .blog__item {
   position: relative;
   max-width: 350px;
   border-radius: 20px 0px;
 }
+
 .blog__text {
   position: absolute;
   bottom: 0;
@@ -142,3 +154,271 @@ li {
   line-height: 24px;
   width: 100%;
 }
+
+.album {
+  margin-bottom: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.album__content {
+  margin-right: 130px;
+}
+
+.album__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.album__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.album__logo__text {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+.album__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.7;
+}
+
+.album__points__container {
+  margin-top: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.album__point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.album__images {
+  position: relative;
+}
+
+.album__image {
+  position: relative;
+}
+
+.album__image__front::after {
+  content: '';
+  background-image: url("../img/album__img_2.png");
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  top: 66px;
+  left: 95px;
+  z-index: -1;
+}
+
+.album__image__front img {
+  -webkit-transform: translate(-30px);
+          transform: translate(-30px);
+}
+
+.album__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.point__logo {
+  height: 30px;
+  width: 30px;
+  background: #7A66CC;
+  border-radius: 10px 0px;
+}
+
+.point__text {
+  margin-left: 20px;
+}
+
+.media {
+  margin-bottom: 265px;
+}
+
+.media__image {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.media__content {
+  position: relative;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px 0px;
+  padding: 80px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.media__text {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ffffffaf;
+  margin-bottom: 25px;
+  max-width: 520px;
+}
+
+.media__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #7A66CC;
+}
+
+.nextmedia {
+  margin-bottom: 180px;
+}
+
+.nextmedia__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nextmedia__left {
+  margin-right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nextmedia__right {
+  width: 100%;
+}
+
+.nextmedia__follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.nextmedia__player {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.nextmedia__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nextmedia__logo {
+  margin-right: 30px;
+}
+
+.nextmedia__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.st__area {
+  width: 510px;
+  height: 510px;
+  background: #4f39a7;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -2;
+}
+
+.nd__area {
+  width: 472.22px;
+  height: 472.22px;
+  background: #937fe285;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.rd__area {
+  opacity: 1;
+}
+
+.tracks {
+  margin-top: 50px;
+}
+
+.tracks__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.tracks span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  opacity: 0.5;
+}
+
+.tracks__name {
+  margin-left: 20px;
+}
+
+.follow {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+/*# sourceMappingURL=style.css.map */
