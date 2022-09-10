@@ -13,7 +13,7 @@
     <title>Project №1</title>
 </head>
 <body>
-    <section class = "preview">
+    <section class = "preview" id = "preview">
         <div class="container">
             <header class="header">
                 <div class="header__logo">
@@ -21,12 +21,12 @@
                 </div>
                 <nav class="header__menu">
                     <ul class="header__ul">
-                        <li class="header__item"><a href="/" class="header__link">About</a></li>
-                        <li class="header__item"><a href="/" class="header__link">News</a></li>
-                        <li class="header__item"><a href="/" class="header__link">Music</a></li>
-                        <li class="header__item"><a href="/" class="header__link">Media</a></li>
-                        <li class="header__item"><a href="/" class="header__link">Tours</a></li>
-                        <li class="header__item"><a href="/" class="header__link">Contacts</a></li>
+                        <li class="header__item" data-scroll="album"><a href="/" class="header__link">About</a></li>
+                        <li class="header__item" data-scroll="media"><a href="/" class="header__link">News</a></li>
+                        <li class="header__item" data-scroll="nextmedia"><a href="/" class="header__link">Music</a></li>
+                        <li class="header__item" data-scroll="tours"><a href="/" class="header__link">Media</a></li>
+                        <li class="header__item" data-scroll="toursnext"><a href="/" class="header__link">Tours</a></li>
+                        <li class="header__item" data-scroll="contacts"><a href="/" class="header__link">Contacts</a></li>
                     </ul>
                 </nav>
             </header>
@@ -77,7 +77,7 @@
         </div>
         
     </section>
-    <section class = "album">
+    <section class = "album" id = "album">
         <div class="container album__container">
             <div class="album__content">
                 <div class="album__title">
@@ -118,7 +118,7 @@
             </div>
         </div>
     </section>
-    <section class="media">
+    <section class="media" id = "media">
         <div class="container">
             <div class="media__content">
                 <div class="media__info">
@@ -134,7 +134,7 @@
             </div>
         </div>
     </section>
-    <section class="nextmedia">
+    <section class="nextmedia" id = "nextmedia">
         <div class="container">
             <div class="nextmedia__content">
                 <div class="nextmedia__left">
@@ -198,7 +198,7 @@
             </div>
         </div>
     </section>
-    <section class="tours">
+    <section class="tours" id = "tours">
         <div class="container">
             <div class="tours__content">
                 <div class="tours__item">
@@ -223,7 +223,7 @@
             </div>
         </div>
     </section>
-    <section class="toursnext">
+    <section class="toursnext" id = "toursnext">
         <div class="container">
             <div class="toursnext__content">
                 <div class="swiper">
@@ -289,7 +289,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id = "contacts">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__logo">
@@ -358,5 +358,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/previewPlayer.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </body>
 </html>

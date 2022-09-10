@@ -154,7 +154,6 @@ li {
 }
 
 .blog {
-  margin-bottom: 180px;
   display: flex;
   gap: 30px;
 }
@@ -177,6 +176,7 @@ li {
 }
 
 .album {
+  margin-top: 180px;
   margin-bottom: 240px;
   display: flex;
 }
