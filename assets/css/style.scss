@@ -92,8 +92,13 @@ li {
         font-weight: bold;
         font-size: 48px;
         margin-bottom: 10px;
+        animation: typewriter steps(30) 3s 1 normal both;
+        overflow: hidden;
+        white-space: nowrap;
+        animation-delay: 0.5s;
     }
 
+    
     // .preview__name
 
     &__name {
@@ -102,6 +107,19 @@ li {
         -webkit-text-stroke: 1px #fff;
         color: transparent;
         line-height: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typewriter steps(30) 1.5s 1 normal both, ;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
     }
 
     // .preview__player
@@ -109,6 +127,18 @@ li {
     &__player {
        display: flex;
        align-items: center;
+       overflow: hidden;
+       animation: typewriter steps(50) 0.5s 1 normal both, ;
+        animation-delay: 0.5s;
+
+    }
+
+    &__wrapper {
+        height: 20px;
+        width: 100%;
+        display: flex;
+        margin: 0 45px;
+        align-items: center;
     }
 
     // .preview__play
@@ -116,6 +146,13 @@ li {
     &__play {
         display: flex;
         align-items: center;
+        background-image: url("../img/play.svg");
+        height: 25px;
+        width: 25px;
+    }
+    &__pause {
+        background-image: url("../img/pause.svg");
+        background-repeat: no-repeat;
     }
 
     // .preview__line
@@ -123,13 +160,17 @@ li {
     &__line {
         position: relative;
         width: 100%;
-        margin: 0 45px;
+        
         height: 2px;
         background-color: white;
     }
 
     &__time {
         min-width: 110px;
+        display: flex;
+    }
+    &__duration {
+        margin-left: 5px;
     }
 }
 .fully {

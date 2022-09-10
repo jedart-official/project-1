@@ -34,13 +34,18 @@
                 <h1 class="preview__title">New Single</h1>
                 <p class="preview__name">War For Love</p>
                 <div class="preview__player">
-                    <div class="preview__play">
-                        <img src="assets/img/play.svg" alt="">
+                    <audio class = "preview__audio" src="assets/sound/Bright Lights - War For Love.mp3"></audio>
+                    <div class="preview__play"></div>
+                    <div class="preview__wrapper">
+                        <div class="preview__line">
+                            <div class="fully__line"></div>
+                        </div>
                     </div>
-                    <div class="preview__line">
-                        <div class="fully__line"></div>
-                    </div>
-                    <span class = "preview__time">00:22-02:54</span>
+                    <span class = "preview__time">
+                        <p class = "preview__current"> 00:45 -</p>
+                        <p class = "preview__duration">02:55</p>
+                      
+                    </span>
                 </div>
             </div>
             <div class = "blog">
@@ -352,5 +357,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/previewPlayer.js"></script>
 </body>
 </html>

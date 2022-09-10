@@ -60,6 +60,12 @@ li {
   font-weight: bold;
   font-size: 48px;
   margin-bottom: 10px;
+  -webkit-animation: typewriter steps(30) 3s 1 normal both;
+          animation: typewriter steps(30) 3s 1 normal both;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .preview__name {
   font-size: 100px;
@@ -67,24 +73,68 @@ li {
   -webkit-text-stroke: 1px #fff;
   color: transparent;
   line-height: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: typewriter steps(30) 1.5s 1 normal both;
+          animation: typewriter steps(30) 1.5s 1 normal both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 .preview__player {
   display: flex;
+  align-items: center;
+  overflow: hidden;
+  -webkit-animation: typewriter steps(50) 0.5s 1 normal both;
+          animation: typewriter steps(50) 0.5s 1 normal both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.preview__wrapper {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  margin: 0 45px;
   align-items: center;
 }
 .preview__play {
   display: flex;
   align-items: center;
+  background-image: url("../img/play.svg");
+  height: 25px;
+  width: 25px;
+}
+.preview__pause {
+  background-image: url("../img/pause.svg");
+  background-repeat: no-repeat;
 }
 .preview__line {
   position: relative;
   width: 100%;
-  margin: 0 45px;
   height: 2px;
   background-color: white;
 }
 .preview__time {
   min-width: 110px;
+  display: flex;
+}
+.preview__duration {
+  margin-left: 5px;
 }
 
 .fully__line {
