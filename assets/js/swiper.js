@@ -7,6 +7,9 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
     breakpoints: {
       280: {
         slidesPerView: 1,
