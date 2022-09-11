@@ -310,12 +310,22 @@
   .media__info {
     padding: 10px 15px;
   }
+  .media__image {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+  }
+  .media__image img {
+    width: 100%;
+  }
   .preview__name {
     font-size: 60px;
     margin-bottom: 20px;
   }
   .footer__title {
     display: none;
+  }
+  .tours__item {
+    display: flex;
   }
 }
 @media (max-width: 440px) {

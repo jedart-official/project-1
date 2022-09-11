@@ -97,7 +97,7 @@ playerWrapper.addEventListener("mouseup", moveRemove)
 
 function moveSetUpdateMobile(e){
     const moveAllWidthMobile = playerWrapper.clientWidth
-    const moveSetWidthMobile = e.touches[0].clientX - 80
+    const moveSetWidthMobile = e.touches[0].clientX - 120
     const audioDuration = playerAudio.duration
     playerAudio.currentTime = (moveSetWidthMobile / moveAllWidthMobile) * audioDuration
     playerBar.style.width = `${moveSetWidthMobile}px`
