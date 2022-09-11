@@ -9,10 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/adaptive.css">
     
     <title>Project №1</title>
 </head>
 <body>
+    <nav class="header__mobile">
+        <div class="header__container">
+            <ul class="header__ul">
+                <li class="header__item" data-scroll="album"><a href="/" class="header__link">About</a></li>
+                <li class="header__item" data-scroll="media"><a href="/" class="header__link">News</a></li>
+                <li class="header__item" data-scroll="nextmedia"><a href="/" class="header__link">Music</a></li>
+                <li class="header__item" data-scroll="tours"><a href="/" class="header__link">Media</a></li>
+                <li class="header__item" data-scroll="toursnext"><a href="/" class="header__link">Tours</a></li>
+                <li class="header__item" data-scroll="contacts"><a href="/" class="header__link">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
     <section class = "preview" id = "preview">
         <div class="container">
             <header class="header">
@@ -29,6 +42,10 @@
                         <li class="header__item" data-scroll="contacts"><a href="/" class="header__link">Contacts</a></li>
                     </ul>
                 </nav>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                
             </header>
             <div class="preview__text">
                 <h1 class="preview__title">New Single</h1>
@@ -87,10 +104,8 @@
                     <h1 class="album__logo__text">Bright Lights</h1>
                 </div>
                 <div class="album__text">
-                    Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and record producer. She has written for numerous 
-                    <br>
-                    <br>
-                    pop stars including Britney Spears, Justin Bieber, Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide. More than 100 million of those streams can be attributed to her artist career and include such hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her own single "Runaway." She was also a featured vocalist on Zedd's #1 Clarity album. Her latest music video, "Put It Down," reached 1 million streams in the first week, releasing independently. Bright Lights is currently in the studio working on a self-produced album slated for release in 2020. 
+                    <p>Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and record producer. She has written for numerous </p> 
+                    <p>pop stars including Britney Spears, Justin Bieber, Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide. More than 100 million of those streams can be attributed to her artist career and include such hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her own single "Runaway." She was also a featured vocalist on Zedd's #1 Clarity album. Her latest music video, "Put It Down," reached 1 million streams in the first week, releasing independently. Bright Lights is currently in the studio working on a self-produced album slated for release in 2020. </p>
                 </div>
                 <div class="album__points__container">
                     <div class="album__point">
@@ -157,8 +172,10 @@
                         <div class="preview__play">
                             <img src="assets/img/play.svg" alt="">
                         </div>
-                        <div class="preview__line">
-                            <div class="fully__line"></div>
+                        <div class="preview__wrapper">
+                            <div class="preview__line">
+                                <div class="fully__line"></div>
+                            </div>
                         </div>
                         <span class = "preview__time">00:22-02:54</span>
                     </div>
@@ -359,5 +376,6 @@
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/previewPlayer.js"></script>
     <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/burger.js"></script>
 </body>
 </html>

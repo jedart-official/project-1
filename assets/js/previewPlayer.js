@@ -62,8 +62,6 @@ function progressSet(e){
     const setWidth = e.offsetX
     const audioDuration = playerAudio.duration
     playerAudio.currentTime = (setWidth / allWidth) * audioDuration 
-    console.log(playerAudio.currentTime);
-
 }
 playerContainer.addEventListener("click", progressSet)
 
@@ -86,13 +84,34 @@ function moveSetUpdate(e){
 function moveSet(e){
     playerWrapper.addEventListener('mousemove', moveSetUpdate);
 }
-
-
-
 function moveRemove(){
     playerWrapper.removeEventListener("mousemove", moveSetUpdate)
-    
 }
 
 playerBar.addEventListener("mousedown", moveSet)
 playerWrapper.addEventListener("mouseup", moveRemove)
+
+
+
+
+
+function moveSetUpdateMobile(e){
+    const moveAllWidthMobile = playerWrapper.clientWidth
+    const moveSetWidthMobile = e.touches[0].clientX - 80
+    const audioDuration = playerAudio.duration
+    playerAudio.currentTime = (moveSetWidthMobile / moveAllWidthMobile) * audioDuration
+    playerBar.style.width = `${moveSetWidthMobile}px`
+}
+function moveSetMobile(e){
+    playerWrapper.addEventListener('touchmove', moveSetUpdateMobile);
+}
+
+
+
+function moveRemoveMobile(){
+    playerWrapper.removeEventListener("touchmove", moveSetUpdateMobile)
+    
+}
+
+playerBar.addEventListener("touchstart", moveSetMobile)
+playerWrapper.addEventListener("touchend", moveRemoveMobile)
