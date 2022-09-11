@@ -226,6 +226,9 @@
     margin-top: 100px;
     margin-bottom: 0;
   }
+  .footer {
+    margin-bottom: 70px;
+  }
   .preview__title {
     font-size: 36px;
   }
