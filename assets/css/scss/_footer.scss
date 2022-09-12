@@ -1,0 +1,97 @@
+.footer {
+    margin-bottom: 40px;
+    @media (max-width: 920px){
+        margin-bottom: 70px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo {
+        margin-bottom: 60px;
+    }
+    &__info {
+        display: flex;
+    }
+    &__artist {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+        @media (max-width: 450px){
+            display: none;
+        }
+    }
+    &__descr{
+        margin-left: 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+        @media (max-width: 380px){
+            display: none;
+        }
+    }
+    &__email {
+        display: flex;
+        flex-direction: column;
+    }
+    &__social {
+        margin-top: 70px;
+        @media (max-width: 620px){
+            flex-wrap: wrap;
+        }
+        @media (max-width: 440px){
+            justify-content: center;
+        }
+        @media (max-width: 380px){
+            margin-top: 0;
+        }
+    }
+    &__rights {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+    &__title {
+        &__title {
+            display: none;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 100px;
+    &__item {
+        width: 60px;
+        height: 60px;
+        background: #2C2C2C;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__area {
+        width: 44px;
+        height: 44px;
+        background: #7A66CC;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+// variables
 const player = document.querySelector(".preview__player")
 const playerBtn = document.querySelector(".preview__play")
 const playerAudio = document.querySelector(".preview__audio")
@@ -9,21 +10,18 @@ const playerDurationTime = document.querySelector(".preview__duration")
 const playerWrapper = document.querySelector(".preview__wrapper")
 
 
-
 // play
-
 function play(){
     playerAudio.play()
 }
 
 // pause 
-
 function pause(){
     playerAudio.pause()
 }
 
-// pause / play
 
+// pause / play
 playerBtn.addEventListener("click", () =>{
     if (playerBtn.classList.contains("preview__pause")){
         playerAudio.pause()
@@ -35,8 +33,8 @@ playerBtn.addEventListener("click", () =>{
     }
 })
 
-// update progressBar
 
+// update progressBar
 function progressBarUpdate(e){
     const {duration, currentTime} = e.srcElement
     const playerDuration = (currentTime  /  duration) * 100
@@ -49,14 +47,11 @@ function progressBarUpdate(e){
         currentSec.toString().padStart(2, '0')
     ].join(":")
     playerCurrentTime.innerHTML = `${newcurrentTimeFormat} -`
-    
 }
-
 playerAudio.addEventListener("timeupdate", progressBarUpdate)
 
 
 // set progress
-
 function progressSet(e){
     const allWidth = this.clientWidth
     const setWidth = e.offsetX
@@ -65,15 +60,15 @@ function progressSet(e){
 }
 playerContainer.addEventListener("click", progressSet)
 
-// Autoplay 
 
+// Autoplay 
 function autoplay(){
     play()
 }
-
 playerAudio.addEventListener("ended", autoplay)
 
 
+// update progress bar with move
 function moveSetUpdate(e){
     const moveAllWidth = playerContainer.clientWidth
     const moveSetWidth = e.offsetX
@@ -81,20 +76,17 @@ function moveSetUpdate(e){
     playerAudio.currentTime = (moveSetWidth / moveAllWidth) * audioDuration
     playerBar.style.width = `${moveSetWidth}px`
 }
-function moveSet(e){
+function moveSet(){
     playerWrapper.addEventListener('mousemove', moveSetUpdate);
 }
 function moveRemove(){
     playerWrapper.removeEventListener("mousemove", moveSetUpdate)
 }
-
 playerBar.addEventListener("mousedown", moveSet)
 playerWrapper.addEventListener("mouseup", moveRemove)
 
 
-
-
-
+// update progress bar with move in Mobile
 function moveSetUpdateMobile(e){
     const moveAllWidthMobile = playerWrapper.clientWidth
     const moveSetWidthMobile = e.touches[0].clientX - 120
@@ -105,13 +97,8 @@ function moveSetUpdateMobile(e){
 function moveSetMobile(e){
     playerWrapper.addEventListener('touchmove', moveSetUpdateMobile);
 }
-
-
-
 function moveRemoveMobile(){
     playerWrapper.removeEventListener("touchmove", moveSetUpdateMobile)
-    
 }
-
 playerBar.addEventListener("touchstart", moveSetMobile)
 playerWrapper.addEventListener("touchend", moveRemoveMobile)

@@ -1,0 +1,90 @@
+.toursnext {
+    margin-bottom: 180px;
+    &__content {
+        position: relative;
+    }
+    &__item {
+        border-radius: 30px 0px;
+        background-color: #2F2B2B;
+        max-width: 350px;
+    }
+    &__image {
+        @media (max-width: 1280px){
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__info {
+        padding-left: 35px;
+    }
+    &__adress {
+        margin-top: 30px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        opacity: 0.5;
+    }
+    &__descr {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__buy {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+    &__date {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+    &__ticket {
+        padding: 18px 62px 18px 52px;
+        background: #7A66CC;
+        border-radius: 30px 0px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+}
+
+.swiper-button-prev {
+    transform: translate(-80px, 0);
+    width: 40px;
+    height: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 0px;
+    background-image: url(../img/prevBack.png);
+    background-size: cover;
+    background-position: center;
+    &::after{
+        content: ''!important;
+    }
+}
+.swiper-button-next {
+    transform: translate(80px, 0);
+    width: 40px;
+    height: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 0px;
+    background-image: url(../img/prevNext.png);
+    background-size: cover;
+    background-position: center;
+    &::after{
+        content: ''!important;
+
+    }
+}
+.swiper-button-prev, .swiper-button-next {
+    @media (max-width: 1280px){
+        display: none !important; 
+    }
+}

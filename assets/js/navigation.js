@@ -1,5 +1,8 @@
+// navigation item
 let scrollBtns = document.querySelectorAll(".header__item")
 
+
+// set events for scroll
 scrollBtns.forEach(element => {
     element.addEventListener("click", (e)=>{
         e.preventDefault()

@@ -1,0 +1,141 @@
+.album {
+    margin-top: 180px;
+    margin-bottom: 240px;
+    display: flex;
+
+    &__content {
+        margin-right: 130px;
+        @media (max-width: 1380px){
+            max-width: 600px;
+            margin-right: 80px;
+        }
+        @media (max-width: 1280px){
+            max-width: 500px;
+        }
+        @media (max-width: 1024px){
+            width: 100%;
+            max-width: unset;
+        }
+        @media (max-width: 920px){
+            margin-right: 0;
+        }
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        @media (max-width: 440px){
+            margin-bottom: 15px;
+        }
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        &__text {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 72px;
+            @media (max-width: 440px){
+                font-size: 32px;
+            }
+        }
+
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        opacity: 0.7;
+        @media (max-width: 1024px){
+            font-size: 20px;
+            line-height: 45px;
+        }
+        @media (max-width: 620px){
+            font-size: 16px;
+            p:nth-child(1){
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__points {
+        &__container {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            @media (max-width: 1024px){
+                grid-template-columns: repeat(2, 255px);
+            }
+            @media (max-width: 620px){
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        
+    }
+    &__point {
+        display: flex;
+        align-items: center;
+    }
+    &__images {
+        position: relative;
+        @media (max-width: 1024px){
+            display: none;
+        }
+    }
+    &__image {
+        position: relative;
+        &__front {
+            &::after{
+                content: '';
+                background-image: url("../img/album__img_2.png");
+                width: 350px;
+                height: 400px;
+                position: absolute;
+                top: 66px;
+                left: 95px;
+                z-index: -1;
+            }
+            img {
+                transform: translate(-30px);
+                
+            }
+        }
+        @media (max-width: 1380px){
+            img {
+                max-width: 300px;
+                transform: translate(-50px);
+                transition: 1s;
+                
+            }
+            &::after{
+                transition: 1s;
+                max-width: 300px;
+                height: 100%;
+                left: 30px;
+                top: 45px
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        @media (max-width: 1024px){
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.point {
+    &__logo {
+        height: 30px;
+        width: 30px;
+        background: #7A66CC;
+        border-radius: 10px 0px;
+    }
+    &__text {
+        margin-left: 20px;
+    }
+}
