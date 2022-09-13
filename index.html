@@ -154,7 +154,7 @@
                     <div class="st__area">
                         <div class="nd__area">
                             <div class="rd__area">
-                                <img src="assets/img/nextmedia.png" alt="">
+                                <img class="player__image" src="assets/img/nextmedia.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -167,41 +167,43 @@
                         <h1 class = 'nextmedia__text'>Last tracks</h1>
                     </div>
                     <div class="preview__player nextmedia__player">
-                        <div class="preview__play">
-                            <img src="assets/img/play.svg" alt="">
+                        <div class="preview__play tracks__play">
                         </div>
-                        <div class="preview__wrapper">
-                            <div class="preview__line">
-                                <div class="fully__line"></div>
+                        <div class="preview__wrapper main__wrapper">
+                            <div class="preview__line main__container">
+                                <div class="fully__line main__fully__line"></div>
                             </div>
                         </div>
-                        <span class = "preview__time">00:22-02:54</span>
+                        <span class = "preview__time">
+                            <p class = "preview__current main__current__time"> 00:45 -</p>
+                            <p class = "preview__duration main__duration">02:55</p>
+                        </span>
                     </div>
                     <div class="tracks">
-                        <div class="tracks__item">
+                        <div class="tracks__item" id = "0">
                             <span>01</span>
                             <p class = "tracks__name">3LAU, Bright Lights — How You Love Me</p>
+                            <audio class = "main__audio" src="assets/sound/3LAU, Bright Lights — How You Love Me.mp3" ></audio>
                         </div>
-                        <div class="tracks__item">
+                        <div class="tracks__item" id = "1">
                             <span>02</span>
-                            <p class = "tracks__name">Bright Lights, Kaleena Zanders, Kandy — War For Love
-                            </p>
+                            <p class = "tracks__name">Bright Lights, Kaleena Zanders, Kandy — War For Love</p>
                         </div>
-                        <div class="tracks__item">
+                        <div class="tracks__item" id = "2">
                             <span>03</span>
-                            <p class = "tracks__name">Pink Is Punk, Benny Benassi, Bright Lights — Ghost </p>
+                            <p class = "tracks__name">Pink Is Punk, Benny Benassi, Bright Lights — Ghost</p>
                         </div>
-                        <div class="tracks__item">
+                        <div class="tracks__item" id = "3">
                             <span>04</span>
-                            <p class = "tracks__name">Hardwell, Dyro, Bright Lights — Never Say Goodbye </p>
+                            <p class = "tracks__name">Hardwell, Dyro, Bright Lights — Never Say Goodbye</p>
                         </div>
-                        <div class="tracks__item">
+                        <div class="tracks__item"  id = "4">
                             <span>05</span>
-                            <p class = "tracks__name">Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now </p>
+                            <p class = "tracks__name">Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now</p>
                         </div>
-                        <div class="tracks__item">
+                        <div class="tracks__item"  id = "5">
                             <span>05</span>
-                            <p class = "tracks__name">Zedd, Bright Lights — Follow You Down </p>
+                            <p class = "tracks__name">Zedd, Bright Lights — Follow You Down</p>
                         </div>
                     </div>
                     <div class="nextmedia__follow">
@@ -375,5 +377,6 @@
     <script src="assets/js/previewPlayer.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/burger.js"></script>
+    <script src="assets/js/player.js"></script>
 </body>
 </html>

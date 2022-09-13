@@ -104,7 +104,11 @@
 }
 .rd {
     &__area {
+        width: 90%;
         opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media (max-width: 1024px){
             transition: 1s;
             width: 90%;
@@ -124,6 +128,7 @@
         display: flex;
         align-items: flex-end;
         margin-bottom: 20px;
+        cursor: pointer;
         @media (max-width: 1024px){
             margin-bottom: 10px;
             font-size: 14px;
@@ -146,4 +151,11 @@
     @media (max-width: 1024px){
         font-size: 18px;
     }
+}
+.player__image {
+    width: 100%;
+    border-radius: 50%;
+}
+.tracks__play {
+    width: 35px;
 }

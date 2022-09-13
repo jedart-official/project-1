@@ -1,3 +1,21 @@
 .body-hide {
     overflow: hidden;
 }
+.text_purple {
+    color:#7A66CC;;
+    transition: 0.3s all ease;
+}
+
+.image__rotate {
+    animation: rotate 0.5s infinite linear;
+    animation-duration: 10s;
+}   
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
