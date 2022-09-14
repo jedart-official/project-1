@@ -58,7 +58,7 @@ function progressSet(e){
     const audioDuration = playerAudio.duration
     playerAudio.currentTime = (setWidth / allWidth) * audioDuration 
 }
-playerContainer.addEventListener("click", progressSet)
+playerWrapper.addEventListener("click", progressSet)
 
 
 // Autoplay 
@@ -74,16 +74,21 @@ function moveSetUpdate(e){
     const moveSetWidth = e.offsetX
     const audioDuration = playerAudio.duration
     playerAudio.currentTime = (moveSetWidth / moveAllWidth) * audioDuration
-    playerBar.style.width = `${moveSetWidth}px`
+    if (playerBar.style.width < playerContainer.style.width){
+        playerBar.style.width = `${moveSetWidth}px`
+    }
+    
+    
 }
 function moveSet(){
-    playerWrapper.addEventListener('mousemove', moveSetUpdate);
+    document.addEventListener('mousemove', moveSetUpdate);
+    document.addEventListener("mouseup", moveRemove)
 }
 function moveRemove(){
-    playerWrapper.removeEventListener("mousemove", moveSetUpdate)
+    document.removeEventListener("mousemove", moveSetUpdate)
 }
 playerBar.addEventListener("mousedown", moveSet)
-playerWrapper.addEventListener("mouseup", moveRemove)
+
 
 
 // update progress bar with move in Mobile

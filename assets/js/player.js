@@ -20,7 +20,7 @@ function playerProcess(){
     MainPlayerTrack.forEach(element=> {
         element.addEventListener("click", ()=>{
             MainPlayerAudio.currentTime = 0;
-            pause()
+            mainPause()
             clear(element)
             let text = element.children[1]
             let soundIndex = element.getAttribute("id")
@@ -30,7 +30,7 @@ function playerProcess(){
             MainPlayerImage.src = `assets/img/${text.innerHTML}.webp`
             MainPlayerBtn.classList.add("preview__pause")
             MainPlayerImage.classList.add("image__rotate")
-            play()
+            mainPlay()
             // pausePlay()
         })
     });
@@ -38,10 +38,10 @@ function playerProcess(){
 
 MainPlayerBtn.addEventListener("click", ()=> {
     if (MainPlayerBtn.classList.contains("preview__pause")){
-        pause()
+        mainPause()
     }
     else {
-        play()
+        mainPlay()
     }
 })
     
@@ -57,14 +57,14 @@ function clear(){
 
 
 // play
-function play(){
+function mainPlay(){
     MainPlayerImage.classList.add("image__rotate")
     MainPlayerBtn.classList.add("preview__pause")
     MainPlayerAudio.play()
 }
 
 // pause 
-function pause(){
+function mainPause(){
     MainPlayerImage.classList.remove("image__rotate")
     MainPlayerBtn.classList.remove("preview__pause")
     MainPlayerAudio.pause()
@@ -97,7 +97,7 @@ function mainProgressSet(e){
     const mainAudioDuration = MainPlayerAudio.duration
     MainPlayerAudio.currentTime = (mainSetWidth / mainAllWidth) * mainAudioDuration 
 }
-MainPlayerContainer.addEventListener("click", mainProgressSet)
+MainPlayerWrapper.addEventListener("click", mainProgressSet)
 
 
 // Autoplay 
