@@ -791,6 +791,7 @@ li {
 .player__image {
   width: 100%;
   border-radius: 50%;
+  transition: 0.5s;
 }
 
 .tracks__play {
@@ -1083,17 +1084,21 @@ li {
 @-webkit-keyframes rotate {
   0% {
     transform: rotate(0deg);
+    transition: 1s all ease;
   }
   100% {
     transform: rotate(360deg);
+    transition: 1s all ease;
   }
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
+    transition: 1s all ease;
   }
   100% {
     transform: rotate(360deg);
+    transition: 1s all ease;
   }
 }/*# sourceMappingURL=style.css.map */

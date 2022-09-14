@@ -9,7 +9,7 @@
 .image__rotate {
     animation: rotate 0.5s infinite linear;
     animation-duration: 10s;
-    transition: 1s all ease;
+
 }   
 
 @keyframes rotate {
@@ -23,6 +23,3 @@
     }
 }
 
-.image__rotate-reverse {
-    transition: 1s all ease;
-}

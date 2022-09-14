@@ -29,7 +29,7 @@ function playerProcess(){
             MainPlayerAudio.src = `assets/sound/${soundName}.mp3`
             MainPlayerImage.src = `assets/img/${text.innerHTML}.webp`
             MainPlayerBtn.classList.add("preview__pause")
-            MainPlayerImage.classList.add("image__rotate")
+            // s
             mainPlay()
             // pausePlay()
         })
@@ -58,19 +58,22 @@ function clear(){
 
 // play
 function mainPlay(){
-    MainPlayerImage.classList.add("image__rotate")
+    // MainPlayerImage.classList.add("image__rotate")
     MainPlayerBtn.classList.add("preview__pause")
     MainPlayerAudio.play()
 }
 
 // pause 
 function mainPause(){
-    MainPlayerImage.classList.remove("image__rotate")
+    // MainPlayerImage.classList.remove("image__rotate")
     MainPlayerBtn.classList.remove("preview__pause")
+    imageRotate = -3
     MainPlayerAudio.pause()
+    
 }
 
 
+let imageRotate = 0
 
 // update progressBar
 function mainProgressBarUpdate(e){
@@ -85,6 +88,9 @@ function mainProgressBarUpdate(e){
         MainCurrentSec.toString().padStart(2, '0')
     ].join(":")
     MainPlayerCurrentTime.innerHTML = `${MainNewCurrentTimeFormat} -`
+    imageRotate +=3
+    MainPlayerImage.style.transform = `rotate(${imageRotate}deg)`
+    
 }
 MainPlayerAudio.addEventListener("timeupdate", mainProgressBarUpdate)
 
@@ -93,7 +99,6 @@ MainPlayerAudio.addEventListener("timeupdate", mainProgressBarUpdate)
 function mainProgressSet(e){
     const mainAllWidth = this.clientWidth
     const mainSetWidth = e.offsetX
-    console.log(mainSetWidth);
     const mainAudioDuration = MainPlayerAudio.duration
     MainPlayerAudio.currentTime = (mainSetWidth / mainAllWidth) * mainAudioDuration 
 }
@@ -114,12 +119,14 @@ function mainMoveSetUpdate(e){
     const mainAudioDuration = MainPlayerAudio.duration
     MainPlayerAudio.currentTime = (mainMoveSetWidth / mainMoveAllWidth) * mainAudioDuration
     MainPlayerBar.style.width = `${mainMoveSetWidth}px`
+    mainPause()
 }
 function mainMoveSet(){
     MainPlayerWrapper.addEventListener('mousemove', mainMoveSetUpdate);
 }
 function mainMoveRemove(){
     MainPlayerWrapper.removeEventListener("mousemove", mainMoveSetUpdate)
+    mainPlay()
 }
 MainPlayerBar.addEventListener("mousedown", mainMoveSet)
 MainPlayerWrapper.addEventListener("mouseup", mainMoveRemove)

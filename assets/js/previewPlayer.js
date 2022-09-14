@@ -77,7 +77,7 @@ function moveSetUpdate(e){
     if (playerBar.style.width < playerContainer.style.width){
         playerBar.style.width = `${moveSetWidth}px`
     }
-    
+    pause()
     
 }
 function moveSet(){
@@ -86,6 +86,7 @@ function moveSet(){
 }
 function moveRemove(){
     document.removeEventListener("mousemove", moveSetUpdate)
+    play()
 }
 playerBar.addEventListener("mousedown", moveSet)
 
