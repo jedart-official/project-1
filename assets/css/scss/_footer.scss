@@ -86,12 +86,23 @@
         height: 44px;
         background: #7A66CC;
         border-radius: 50%;
+        transition: 0.5s all ease;
         display: flex;
         align-items: center;
         justify-content: center;
         a {
             display: flex;
             align-items: center;
+        }
+        &:hover {
+            background-color: #FFFFFF;
+            
+        }
+        svg:hover{
+            path {
+                transition: 0.5s all ease;
+                    fill:#7A66CC !important;
+            }
         }
     }
 }
